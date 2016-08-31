@@ -55,15 +55,27 @@ change `draft = true` to `draft = false`.
 
 ## Step 5: Deploy to GitHub Pages
 
-You need to do a little magic to set up the git respository and connect it to
-your account; please see the official [QuickStart tutorial](https://gohugo.io/overview/quickstart/)
-for that.
-
-Once set up, you just 
+Not that easy actually.  But doable!  I'll be back with more info.
 
 ```sh
-rm -rf public
+git init
+git remote add origin https://github.com/getup8/getup8.github.io.git
+git checkout -b hugo
 
-git submodule add -b master git@github.com:getup8/getup8.github.io.git public
-``
+# added files
+
+git add --all
+git commit -m "First commit to source"
+git push -u origin source
+```
+
+You then have to go into GitHub and change the default branch from `master`
+to your hugo branch.
+
+Run `hugo -t hugo-future-imperfect` to generate the blog.
+
+git add --all
+git commit -m "First post"
+git push -u origin hugo
+
 
