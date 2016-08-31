@@ -1,0 +1,62 @@
+baseurl = "http://www.getup8.com/"
+languageCode = "en-us"
+title = "The Blog of GetUp8"
+preserveTaxonomyNames = true
+paginate = 3
+
+[params]
+    # Sets the meta tag description, usually reserved for the main page
+    description          = "getup8 blog"
+    # This will appear on the top left of the navigation bar
+    navbarTitle          = "getup8"
+    # Social media buttons that appear on the sidebar
+    socialAppearAtTop    = true
+    socialAppearAtBottom = true
+    # set this to the section name if section is not post
+    viewMorePostLink     = "/blog/"
+    author = "Alex"
+    disqusShortname = "getup8"
+
+
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[params.intro]
+    header    = "GetUp8"
+
+    paragraph = "data, code, exercise, cooking, travel, photography and life."
+
+    about     = "San Diego native living in New York."
+
+
+# Insert your username and the icon will apear on the page as long as
+# socialAppearAtTop or socialAppearAtBottom is set to true in the params area
+# The social media icons will appear on the sidebar
+[social]
+    github          = "getup8"
+    bitbucket       = ""
+    jsfiddle        = ""
+    codepen         = ""
+    foursquare      = ""
+    dribbble        = ""
+    deviantart      = ""
+    behance         = ""
+    flickr          = ""
+    instagram       = "getup8"
+    youtube         = ""
+    vimeo           = ""
+    vine            = ""
+    medium          = "getup8"
+    wordpress       = ""
+    tumblr          = ""
+    xing            = ""
+    linkedin        = ""
+    slideshare      = ""
+    stackoverflow   = ""
+    reddit          = ""
+    pinterest       = ""
+    googleplus      = ""
+    facebook        = ""
+    facebook_admin  = ""
+    twitter_domain  = ""
+    twitter         = "getup8"
+    email           = ""
