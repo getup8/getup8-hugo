@@ -59,5 +59,11 @@ You need to do a little magic to set up the git respository and connect it to
 your account; please see the official [QuickStart tutorial](https://gohugo.io/overview/quickstart/)
 for that.
 
+Once set up, you just 
 
+```sh
+rm -rf public
+
+git submodule add -b master git@github.com:getup8/getup8.github.io.git public
+``
 
