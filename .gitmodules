@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/getup8/getup8.github.io.git
-	branch = master
