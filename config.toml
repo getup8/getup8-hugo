@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "The Blog of GetUp8"
 preserveTaxonomyNames = true
 paginate = 3
+disqusShortname = "getup8"
+googleAnalytics = "UA-83538021-1"
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
@@ -15,7 +17,6 @@ paginate = 3
     # set this to the section name if section is not post
     viewMorePostLink     = "/blog/"
     author = "Alex"
-    disqusShortname = "getup8"
 
 
 # parms.intro will appear on the sidebar
