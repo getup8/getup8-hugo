@@ -7,10 +7,10 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build project with the theme chosen theme and direct the output to the
 # GitHub Pages repository
-hugo -t hugo-future-imperfect -d $(PAGES_PATH)
+hugo -t hugo-future-imperfect -d ${PAGES_PATH}
 
 # Now move to that directory
-cd $(PAGES_PATH)
+cd ${PAGES_PATH}
 
 # Set commit message to first arg or default.
 MSG="Rebuilding site `date`"
@@ -20,8 +20,8 @@ fi
 
 # Add, commit and push changes.
 git add --all
-git commit -m "$(MSG)"
+git commit -m "${MSG}"
 git push -u origin master
 
 # Come Back
-cd $(DIR)
+cd ${DIR}
