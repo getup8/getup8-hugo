@@ -1,24 +1,27 @@
 #!/bin/bash
 
+PAGES_PATH="../getup8.github.io"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo --theme=hugo-future-imperfect
+# Build project with the theme chosen theme and direct the output to the
+# GitHub Pages repository
+hugo -t hugo-future-imperfect -d $(PAGES_PATH)
 
-# Go To Public folder
-cd public
-# Add changes to git.
-git add -A
+# Now move to that directory
+cd $(PAGES_PATH)
 
-# Commit changes.
-msg="rebuilding site `date`"
+# Set commit message to first arg or default.
+MSG="Rebuilding site `date`"
 if [ $# -eq 1 ]
-  then msg="$1"
+  then MSG="$1"
 fi
-git commit -m "$msg"
 
-# Push source and build repos.
-git push origin master
+# Add, commit and push changes.
+git add --all
+git commit -m "$(MSG)"
+git push -u origin master
 
 # Come Back
-cd ..
+cd $(DIR)
