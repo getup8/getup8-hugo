@@ -5,9 +5,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build project with the theme chosen theme and direct the output to the
-# GitHub Pages repository
-hugo -t hugo-future-imperfect -d ${PAGES_PATH}
+# Build project and direct the output to the GitHub Pages repository
+hugo -d ${PAGES_PATH}
 
 # Now move to that directory
 cd ${PAGES_PATH}
