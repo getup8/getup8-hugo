@@ -1,22 +1,47 @@
 baseurl = "http://www.getup8.com/"
 languageCode = "en-us"
-title = "The Blog of GetUp8"
+title = "GetUp8"
+theme = "hugo-cactus-theme"
 preserveTaxonomyNames = true
 paginate = 3
 disqusShortname = "getup8"
 googleAnalytics = "UA-83538021-1"
-
+ 
 [params]
-    # Sets the meta tag description, usually reserved for the main page
-    description          = "getup8 blog"
-    # This will appear on the top left of the navigation bar
-    navbarTitle          = "getup8"
-    # Social media buttons that appear on the sidebar
-    socialAppearAtTop    = true
-    socialAppearAtBottom = true
-    # set this to the section name if section is not post
-    viewMorePostLink     = "/blog/"
-    author = "Alex"
+    name = "Alex Scott"
+    description = "getup8 blog"
+    bio = "Programming . Data . Health . Random Stuff"
+    twitter = "getup8"
+    enableRSS = true
+
+    # Add custom assets with their paths relative to the static folder
+    customCSS = []
+    customJS  = []
+
+    # The variables below are optionally too and can be used to
+    # translate or customize each string of the theme.
+
+    # Navigation links
+    home = ""
+    about = ""
+    subscribe = ""
+    # Pagination links
+    olderPosts = ""
+    newerPosts = ""
+    readMore = ""
+    copyright = ""
+    # Sharing options and author information in posts
+    aboutAuthor = "If you're a nerd, I'm a nerd."
+    tweet = ""
+    share = ""
+    # 404 page
+    title404 = ""
+    subtitle404 = ""
+
+    # Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
+    iconFont = "mono-social"
+    # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
+    socialIconStyle = "circle"
 
 
 # parms.intro will appear on the sidebar
@@ -29,35 +54,16 @@ googleAnalytics = "UA-83538021-1"
     about     = "San Diego native living in New York."
 
 
-# Insert your username and the icon will apear on the page as long as
-# socialAppearAtTop or socialAppearAtBottom is set to true in the params area
-# The social media icons will appear on the sidebar
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+
+# Add additional social link entries underneath
 [social]
-    github          = "getup8"
-    bitbucket       = ""
-    jsfiddle        = ""
-    codepen         = ""
-    foursquare      = ""
-    dribbble        = ""
-    deviantart      = ""
-    behance         = ""
-    flickr          = ""
-    instagram       = "getup8"
-    youtube         = ""
-    vimeo           = ""
-    vine            = ""
-    medium          = "getup8"
-    wordpress       = ""
-    tumblr          = ""
-    xing            = ""
-    linkedin        = ""
-    slideshare      = ""
-    stackoverflow   = ""
-    reddit          = ""
-    pinterest       = ""
-    googleplus      = ""
-    facebook        = ""
-    facebook_admin  = ""
-    twitter_domain  = ""
-    twitter         = "getup8"
-    email           = ""
+    github = "https://github.com/getup8"
+    instagram = "https://instagram.com/getup8"
+    # medium = "https://medium.com/@getup8"
+    twitter = "https://twitter.com/@getup8"
+    facebook = "https://www.facebook.com/alexscott"
+    email = "mailto:alex@getup8.com"
+    

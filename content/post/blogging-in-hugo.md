@@ -2,6 +2,8 @@
 date = "2016-08-30T22:00:43-04:00"
 draft = false
 title = "Blogging in Hugo"
+tags = [ "Hugo", "GitHub", "Blogging" ]
+categories = [ "Tech" ]
 
 +++
 
@@ -148,5 +150,3 @@ beautiful test post.  Once you have it working, you can actually automate
 Steps 8 and 9 (I automate Step 9) by creating a simple shell script.
 
 Hope this was helpful, let me know if you have any trouble.
-
-
