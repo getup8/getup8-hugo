@@ -19,6 +19,7 @@ well, it:
   * has some [beautiful, modern, responsive (and might I add, free) themes](http://themes.gohugo.io/)
   * is written in [Go](https://golang.org/), which I kinda wanted to learn (and started at the Googs)
 
+
 Below is a quick start guide to get blogging using Hugo and GitHub User Pages.
 I assume you've downloaded and installed Hugo and have a GitHub account.
 
@@ -28,7 +29,8 @@ are great instructions in the [Hugo Quickstart Guide](https://gohugo.io/overview
 So now you have Hugo locally and you're ready to actually get something on the
 web!
 
-# Step 1: Create the GitHub Respositories
+
+## Step 1: Create the GitHub Respositories
 
 The way I decided to do it was to create two separate GitHub respositories, one
 to keep my raw Hugo source and then the GitHub Pages one to deploy the compiled
@@ -105,7 +107,6 @@ change `draft = true` to `draft = false`.
 ## Step 8: Commit Your Changes and Push
 
 ```sh
-
 # Add all files to staging
 git add --all
 # Check the status, make sure files have been added
@@ -114,7 +115,6 @@ git status
 git commit -m "Test post"
 # Push to GitHub repository
 git push -u origin master
-
 ```
 
 
@@ -127,7 +127,6 @@ repository.
 From within the blog source directory again, execute the following.
 
 ```sh
-
 # Generate the static files with your chosen theme and most importantly,
 # direct them to your *other* directory
 hugo -t hugo-future-imperfect -d ../getup8.github.io
@@ -139,7 +138,6 @@ cd ../getup8.github.io
 git add --all
 git commit -m "Test post"
 git push -u origin master
-
 ```
 
 

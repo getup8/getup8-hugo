@@ -15,7 +15,7 @@ googleAnalytics = "UA-83538021-1"
     enableRSS = true
 
     # Add custom assets with their paths relative to the static folder
-    customCSS = []
+    customCSS = ["css/custom.css"]
     customJS  = []
 
     # The variables below are optionally too and can be used to
@@ -42,17 +42,6 @@ googleAnalytics = "UA-83538021-1"
     iconFont = "mono-social"
     # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
     socialIconStyle = "circle"
-
-
-# parms.intro will appear on the sidebar
-# This is optional, but it's suggested to use
-[params.intro]
-    header    = "GetUp8"
-
-    paragraph = "data, code, exercise, cooking, travel, photography and life."
-
-    about     = "San Diego native living in New York."
-
 
 [taxonomies]
     tag = "tags"

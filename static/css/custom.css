@@ -1,0 +1,31 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body {
+    font-size: 1rem;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.profile h2 {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+#wrapper {
+  max-width: 700px;
+}
+
+.post h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*=========================================
+Post List
+=========================================== */
+
+#post-list,
+#archive-list {
+    margin-top: 3rem;
+}
