@@ -29,3 +29,7 @@ Post List
 #archive-list {
     margin-top: 3rem;
 }
+
+#post-list a {
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
