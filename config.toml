@@ -39,9 +39,9 @@ googleAnalytics = "UA-83538021-1"
     subtitle404 = ""
 
     # Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-    iconFont = "mono-social"
+    iconFont = "font-awesome"
     # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-    socialIconStyle = "circle"
+    # socialIconStyle = "circle"
 
 [taxonomies]
     tag = "tags"
@@ -51,8 +51,7 @@ googleAnalytics = "UA-83538021-1"
 [social]
     github = "https://github.com/getup8"
     instagram = "https://instagram.com/getup8"
-    # medium = "https://medium.com/@getup8"
+    medium = "https://medium.com/@getup8"
     twitter = "https://twitter.com/@getup8"
     facebook = "https://www.facebook.com/alexscott"
-    email = "mailto:alex@getup8.com"
     

@@ -21,6 +21,11 @@ body {
     margin-bottom: 2rem;
 }
 
+a.symbol {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+}
+
 /*=========================================
 Post List
 =========================================== */
@@ -32,4 +37,9 @@ Post List
 
 #post-list a {
     font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#post-list h2 {
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
 }

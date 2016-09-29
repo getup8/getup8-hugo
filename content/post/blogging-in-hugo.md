@@ -2,8 +2,9 @@
 date = "2016-08-30T22:00:43-04:00"
 draft = false
 title = "Blogging in Hugo"
-tags = [ "Hugo", "GitHub", "Blogging" ]
-categories = [ "Tech" ]
+description = "A guide to getting set up on Hugo and deploying to GitHub Pages."
+tags = [ "hugo", "github", "blogging" ]
+categories = [ "tech" ]
 
 +++
 
@@ -89,7 +90,7 @@ content section.
 
 To preview the draft, run the following:
 
-`hugo server -t hugo-future-imperfect --buildDrafts`
+`hugo server -t hugo-cactus-theme --buildDrafts`
 
 And then visit [http://localhost:1313/](http://localhost:1313/)
 
