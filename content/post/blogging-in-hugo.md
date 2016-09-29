@@ -130,7 +130,7 @@ From within the blog source directory again, execute the following.
 ```sh
 # Generate the static files with your chosen theme and most importantly,
 # direct them to your *other* directory
-hugo -t hugo-future-imperfect -d ../getup8.github.io
+hugo -t hugo-cactus-theme -d ../getup8.github.io
 
 # Now move to that directory
 cd ../getup8.github.io
