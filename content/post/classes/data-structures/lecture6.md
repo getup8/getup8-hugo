@@ -1,7 +1,7 @@
 +++
 date = "2016-09-26T22:49:10-04:00"
 description = "Lecture 6 of COMS3134 at Columbia University"
-draft = true
+draft = false
 title = "Lecture 6: Linked Lists"
 tags = [ "data structures"]
 categories = [ "computer science" ]

@@ -1,7 +1,7 @@
 +++
 date = "2016-09-21T22:49:15-04:00"
 description = "Lecture 5 of COMS3134 at Columbia University"
-draft = true
+draft = false
 title = "Lecture 5: Iterators and Interfaces"
 tags = [ "data structures"]
 categories = [ "computer science" ]
