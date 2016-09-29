@@ -5,6 +5,10 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+ul {
+    margin-bottom: 1rem;
+}
+
 .profile h2 {
     font-size: 1rem;
     margin-top: 0.8rem;
@@ -18,7 +22,7 @@ body {
 
 .post h2 {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 a.symbol {
