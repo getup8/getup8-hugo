@@ -5,7 +5,7 @@ draft = false
 title = "Lecture 7: ArrayList, LinkedList, Stacks"
 tags = [ "data structures"]
 categories = [ "computer science" ]
-
+hidden = true
 +++
 
 ## Agenda

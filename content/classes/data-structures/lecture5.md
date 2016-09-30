@@ -5,7 +5,7 @@ draft = false
 title = "Lecture 5: Iterators and Interfaces"
 tags = [ "data structures"]
 categories = [ "computer science" ]
-
+hidden = true
 +++
 
 A list is a type of collection.

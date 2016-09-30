@@ -5,7 +5,7 @@ draft = false
 title = "Lecture 6: Linked Lists"
 tags = [ "data structures"]
 categories = [ "computer science" ]
-
+hidden = true
 +++
 
 ArrayList
