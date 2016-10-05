@@ -5,8 +5,14 @@ body {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-ul {
+ul, ol {
+    margin-top: -0.8rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+ol > li {
+    list-style-type: decimal;
 }
 
 .profile h2 {
