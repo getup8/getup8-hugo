@@ -16,6 +16,8 @@ mkproject -p python3 workout_post
 
 # Within the virtualenv, install some packages
 pip install pandas
+pip install jupyter
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 ```
 
 Follow [the instructions](https://developers.google.com/sheets/quickstart/python)
@@ -29,11 +31,12 @@ your data in from Google Sheets obviously.
 import pandas as pd
 
 # Read in our Google Spreadsheet with Pandas
-# Note: the spreadsheet has to be 
+# We want to parse the date as a datetime, not string and we also want to use
+# that column as an index for our data, hence the two arguments in `read_csv`
 sheet_url = ('https://docs.google.com/spreadsheets/d/'
              '19Nl8qft7kv1cZt2VUneql0OgUsSmO4OE3yTbfaR9_o4/'
              'export?gid=0&format=csv')
-workout_data = pd.read_csv(sheet_url, parse_dates=['date'])
+workout_data = pd.read_csv(sheet_url, parse_dates=['date'], index_col=0)
 ```
 
 # Summarize our Workout Dedication
@@ -43,7 +46,7 @@ workout_data = pd.read_csv(sheet_url, parse_dates=['date'])
 wd = workout_data
 
 # And rename our columns for easier reference as well
-wd.columns = ['date', 'alex_ex', 'alex_desc', 'laur_ex', 'laur_desc']
+wd.columns = ['al_exercised', 'al_desc', 'laur_exercised', 'laur_desc']
 
 # Look at the top 5 rows to make sure it looks alright
 wd.head()
@@ -56,8 +59,6 @@ wd.shape
 
 # Get a summary of the [numerical] data.  Hmm, why the 'NaN's?
 wd.describe()
-# /Users/alexscott/virtualenvs/workout_post/lib/python3.5/site-packages/numpy/lib/function_base.py:3834: RuntimeWarning: Invalid value encountered in percentile
-# RuntimeWarning)
 #        alex_exercised  babe_exercised
 # count      490.000000      487.000000
 # mean         0.511224        0.575975
@@ -70,18 +71,28 @@ wd.describe()
 
 # Looks like Laur forgot to fill in some dates!  Let's fix that real quick
 # and just give her zeros.
-wd['laur_ex'].fillna(0, inplace=True)
+wd['laur_exercised'].fillna(0, inplace=True)
 wd.describe()  # much better
 
 # Look at counts of the data
-wd.alex_ex.value_counts()
+wd.al_exercised.value_counts()
 # 1.0    240
 # 0.0    229
 # 0.5     21
 
-wd.laur_ex.value_counts()
+wd.laur_exercised.value_counts()
 # 1.0    269
 # 0.0    198
 # 0.5     23
+
+# Make the data more chart friendly by getting the percent of days worked out.
+# As simple as resampling the time series to be weekly ('W') and taking the
+# mean since we have binary data.
+weekly_data = wd.resample('W').mean()
+weekly_data.plot()
+
+monthly_data = wd.resample('M').mean()
+monthly_data.plot()
+
 
 ```
