@@ -110,10 +110,13 @@ change `draft = true` to `draft = false`.
 ```sh
 # Add all files to staging
 git add --all
+
 # Check the status, make sure files have been added
 git status
+
 # Commit locally
 git commit -m "Test post"
+
 # Push to GitHub repository
 git push -u origin master
 ```
@@ -128,8 +131,8 @@ repository.
 From within the blog source directory again, execute the following.
 
 ```sh
-# Generate the static files with your chosen theme and most importantly,
-# direct them to your *other* directory
+# Generate the static files with your chosen theme and most
+# importantly, direct them to your *other* directory
 hugo -t hugo-cactus-theme -d ../getup8.github.io
 
 # Now move to that directory
