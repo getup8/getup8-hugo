@@ -25,10 +25,10 @@ In the end, the spreadsheet just looked like this:
 | 2016-09-24 | 0        | :(              | 1          | Pilates       |
 | 2016-09-25 | 1        | Gym, upper body | 0          | :(            |
 
-The days's date, a binary column for whether we worked our or not, and then
-an optional note to say what you did.
+The date, a binary column for whether we worked out or not, and an optional
+note to say what you did.
 
-**500 days later**, we're still going strong.  We've filled out every single
+**500 days later**, we're still going strong.  We've filled it out every single
 day. Not always on the same day, I admit, sometimes we'll go a few days or more
 without marking a zero or a one but inevitably we'll remember and backfill the
 unmarked days.
