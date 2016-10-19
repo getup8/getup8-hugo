@@ -11,7 +11,7 @@ googleAnalytics = "UA-83538021-1"
     name = "Alex Scott"
     description = "getup8 blog"
     bio = "Programming . Data . Health . Random Stuff"
-    twitter = "getup8"
+    authorLink = "http://www.getup8.com/about/"
     enableRSS = true
 
     # Add custom assets with their paths relative to the static folder
