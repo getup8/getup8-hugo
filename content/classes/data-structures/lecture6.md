@@ -8,19 +8,16 @@ categories = [ "computer science" ]
 hidden = true
 +++
 
-ArrayList
-Issues if we add to end if we're out of room or if we try to add in the beginning (or middle). O(N).
-
 ## LinkedList
 
 A few types of linked lists: singly and doubly linked.
 
-Singly linked list:
+### Singly Linked Lists
 
   * Each piece of data we insert is placed in a `Node` object
   * `Node` class defines two instance variables
-    1. The data
-    2. Object reference to another node: `next`
+    1. The `data`
+    2. Object reference to another `Node`: `next`
   * Don't have prescribed locations in memory where each element is. You have
     to start at the beginning and work your way to it using the `next`
     references.
@@ -42,6 +39,8 @@ class Node<AnyType> {
     Node<AnyType> next;
 }
 ```
+
+<br/>
 
 ```java
 class LinkedList<AnyType> {
@@ -70,54 +69,50 @@ class LinkedList<AnyType> {
 So what would the cost be to insert a new value at the beginning of the list?
 Order 1. *O(1)*.
 
-  1. Create a new node
+  1. Create a new `Node`
   2. Put data into it
   3. Set `next` equal to `head`
   4. Make `head` refer to it
 
 What about if you want to insert at the end?  You need to iterate all the way
-to the end since you only have a reference to `head`.  So it's O(N).
+to the end since you only have a reference to `head`.  So it's *O(N)*.
 
-What about the middle?  O(N) still.  But once I have the reference to the node
-I want to insert after already, it's easy and O(1).  Remember that.  So if
-you're already moving across the list, and you decide you want to insert
+What about the middle?  *O(N)* still.  But once I have the reference to the
+node I want to insert after already, it's easy and *O(1)*.  Remember that.  So
+if you're already moving across the list, and you decide you want to insert
 something, it's easy and cheap.
 
 Another benefit: We don't need to specify how large this list is going to be.
 
 This is a building block for other data structures.
 
-## Doubly Linked Lists
+### Doubly Linked Lists
 
-You have a head and a tail.  You add a `previous` pointer.  So you can move in
-both directions, forwards or backwards.
+You have a `head` and a `tail`.  You add a `previous` pointer.  So you can move
+in both directions, forwards or backwards.
 
-Iterator interface.  ListIterator interface adds an extra bit that allows you
-to move forward or backward; it exploits the doubly linked list.
+`Iterator` interface.  `ListIterator` interface adds an extra bit that allows
+you to move forward or backward; it exploits the doubly linked list.
 
 Uses "sentinal nodes".  The head data has no data.  The first piece of data is
-actually at head.next().  The tail also doesn't have any data.  The last node
-is tail.previous().
+actually at `head.next()`.  The tail also doesn't have any data.  The last node
+is `tail.previous()`.
 
 Nodes now have three fields:
 
-  1. data
-  2. previous
-  3. next
+  1. `data`
+  2. `previous`
+  3. `next`
 
 An empty doubly linked list:
-null -> head -> tail -> null
+`null` -> `head` -> `tail` -> `null`
 
-If we're going to insert data, we'd insert after head or before tail.
+If we're going to insert data, we'd insert after `head` or before `tail`.
 
-  1. Create a node, populated with data
+  1. Create a `Node`, populated with `data`
   2. `previous` points to `head`
   3. `next` points to `head.next` (instead of `tail`)
   4. `head.next.previous` (or `tail.previous`) points to it
   5. `head.next` points to it
 
 You can actually implement both types with sentinal nodes (singly and doubly).
-
-Next class:
-ArrayList code.
-Doubly LinkedList code.

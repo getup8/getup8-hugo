@@ -84,6 +84,7 @@ Stacks are used in programs (all programs?) and are very present in how
 recursion works.  Each level of the recursion pushes the step onto the stack
 until we return and we start popping them all off.
 
+---
 
 ## Queues and the Josephus Game
 
@@ -116,9 +117,9 @@ We would use a list.  We want to add at one end and remove at the other.
 
 In the `LinkedList` API in Java, the `add` method adds to the end of the list
 by default.  There's also a `remove` method that takes no input and by default,
-removes the first element.  So these directly map to a Queue.
+removes the first element.  So these directly map to a `Queue`.
 
-Java actually has a Queue interface.  In the homework, we implement `MyQueue`
+Java actually has a `Queue` interface.  In the homework, we implement `MyQueue`
 which is slightly different (simplified I believe).
 
 `LinkedList` actually implements `Queue`.  So it uses `enqueue` and `dequeue`.
@@ -154,6 +155,7 @@ public class Josephus {
 }
 ```
 
+---
 
 ## Trees
 

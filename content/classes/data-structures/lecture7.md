@@ -10,9 +10,9 @@ hidden = true
 
 ## Agenda
 
-  * Cycling back to the ArrayListIterator to understand how nested classes
+  * Cycling back to the `ArrayListIterator` to understand how nested classes
     function.
-  * Also going through implementation of LinkedList.
+  * Also going through implementation of `LinkedList`.
   * Stacks and Queues.
 
 ## To Dos
@@ -34,14 +34,14 @@ instantiate it, but `MyArrayList` can.
 
 Purpose of an iterator is to step through a collection of any sort.
 
-  * hasNext(): figure out if there's a next element
-  * next(): move to next and return it
-  * remove(): remove the element that we just moved past
+  * `hasNext()`: figure out if there's a next element
+  * `next()`: move to next and return it
+  * `remove()`: remove the element that we just moved past
 
 Our iterator is *not* `static`.  There are two kinds of nested.
 
-  * Non-`static` is tied to the particular instance of MyArrayList from whence it
-    is generator.
+  * Non-`static` is tied to the particular instance of `MyArrayList` from
+  whence its generator.
 
 The one thing we need to keep track of w/ an iterator is "Where are we?".
 
@@ -57,9 +57,9 @@ wouldn't be tied to a specific instance but I should test it!
 
 `curent++` will evaluate the value of `current` first and then increment it.
 
-MyArrayList.this.remove(--current);
+`MyArrayList.this.remove(--current);`
 
-There's a method in the MyArrayList to actually remove an element which is
+There's a method in the `MyArrayList` to actually remove an element which is
 what we actually want to call.  
 
 `MyArrayList.this` means the specific containing object.
@@ -71,16 +71,16 @@ An Inner Class is non-static nested class.
 
 ---
 
-Back to Linked Lists.
+## Linked Lists
 
-MyLinkedList implementation (that will be sent out?) does a doubly linked list
-with sentinal nodes.
+`MyLinkedList` implementation (that will be sent out?) does a doubly linked
+list with sentinal nodes.
 
 Don't worry about `modCount`.
 
-There's a class LinkedList and you can just instantiate to create.
+There's a class `LinkedList` and you can just instantiate to create.
 
-Has two private Node objects: begin and end.
+Has two private `Node` objects: `begin` and `end`.
 
 `Node` class is `static` and defined in MyLinkedList.
 `Node` doesn't have access to MyLinkedList objects (since it's `static`).
@@ -117,7 +117,7 @@ to the `Node` that exists that many steps into the linked list.
     * Depending on what index is, we start from beginning or end. Doesn't
       change Big Oh
     * Start at first element if start at beginning
-    * Start at endMarker if we start at the end though since we're inserting
+    * Start at `endMarker` if we start at the end though since we're inserting
       before.
 
 Also have a `set` method that also uses `getNode()`.
@@ -133,6 +133,8 @@ Lastly has an `iterator()` method that returns an instance of the
 Look at this code and understand it.
 
 ---
+
+## Stacks
 
 So what can we do with these things??
 
@@ -166,17 +168,10 @@ This is related to the Homework.  Something similar.
 Need to implement a Stack.
 Any List will work.
 
-If singly linked list, push/pop from front, all O(1), otherwise if you do from
-end, it's O(N).
-With doubly linked list, it's O(1) from either end.
+If singly linked list, `push`/`pop` from front, all *O(1)*, otherwise if you do
+from end, it's *O(N)*.
 
-LinkedList has push / pop methods in java.util.  Basically just reimplement this
-along with the other functions above.
+With doubly linked list, it's *O(1)* from either end.
 
----
-
-Queues.
-
-  * Similar to Stacks, but FIFO, first in, first out.
-  * Adding from one end, Removing from the other.
-
+`LinkedList` has push / pop methods in `java.util`.  Basically just reimplement
+this along with the other functions above.
