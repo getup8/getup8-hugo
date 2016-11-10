@@ -80,6 +80,22 @@ pip install virtualenvwrapper
 ```
 
 
+## Environmental Variables in Virtual Environments
+
+This step is optional but if you're going to be setting any configurations or
+storing API ids and secrets in environmental variables, I recommend also
+installing  `autoenv`. Again, I highly recommend you read the
+docs(https://github.com/kennethreitz/autoenv), but this will essentially allow
+you to store environmental variables in `.env` files within your virtual
+environments and when you enter those environments, those variables will be
+set.
+
+```sh
+brew install autoenv
+echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
+```
+
+
 ## Setting Up Virtual Environments
 
 First, you probably should read the `virtualenv` [docs](https://virtualenv.pypa.io/en/stable/)
@@ -136,6 +152,13 @@ gpip(){
 
 Now, for example, `gpip install virtualenv` would install the package globally
 outside a virtual environment.
+
+You should know run the following to make sure everything we've added to
+`.bash_profile` (or equivalent) is run.
+
+```sh
+source ~/.bash_profile
+```
 
 
 ## Creating a Project and Virtual Environment
